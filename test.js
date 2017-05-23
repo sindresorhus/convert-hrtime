@@ -1,9 +1,9 @@
 import test from 'ava';
-import fn from './';
+import m from '.';
 
 test(t => {
-	const x = fn(process.hrtime());
-	t.is(typeof x.s, 'number');
-	t.is(typeof x.ms, 'number');
-	t.is(typeof x.ns, 'number');
+	const x = m(process.hrtime());
+	t.is(typeof x.seconds, 'number');
+	t.is(typeof x.milliseconds, 'number');
+	t.is(typeof x.nanoseconds, 'number');
 });

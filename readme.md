@@ -16,10 +16,10 @@ $ npm install --save convert-hrtime
 const convertHrtime = require('convert-hrtime');
 
 convertHrtime(process.hrtime(process.hrtime()));
-//=> {s: 0.000002399, ms: 0.002399, ns: 2399}
+//=> {seconds: 0.000002399, milliseconds: 0.002399, nanoseconds: 2399}
 ```
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -1,12 +1,12 @@
 'use strict';
-module.exports = function (hrtime) {
-	var ns = hrtime[0] * 1e9 + hrtime[1];
-	var ms = ns / 1e6;
-	var s = ns / 1e9;
+module.exports = hrtime => {
+	const nanoseconds = (hrtime[0] * 1e9) + hrtime[1];
+	const milliseconds = nanoseconds / 1e6;
+	const seconds = nanoseconds / 1e9;
 
 	return {
-		s: s,
-		ms: ms,
-		ns: ns
+		seconds,
+		milliseconds,
+		nanoseconds
 	};
 };

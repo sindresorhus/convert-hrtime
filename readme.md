@@ -1,6 +1,6 @@
 # convert-hrtime [![Build Status](https://travis-ci.org/sindresorhus/convert-hrtime.svg?branch=master)](https://travis-ci.org/sindresorhus/convert-hrtime)
 
-> Convert the result of [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime) to seconds, milliseconds, nanoseconds
+> Convert the result of [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time) to seconds, milliseconds, nanoseconds
 
 
 ## Install

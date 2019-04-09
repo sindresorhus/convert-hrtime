@@ -1,6 +1,6 @@
 {
 	"name": "convert-hrtime",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Convert the result of `process.hrtime()` to seconds, milliseconds, nanoseconds",
 	"license": "MIT",
 	"repository": "sindresorhus/convert-hrtime",

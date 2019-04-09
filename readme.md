@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save convert-hrtime
+$ npm install convert-hrtime
 ```
 
 

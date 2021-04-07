@@ -1,16 +1,19 @@
 {
 	"name": "convert-hrtime",
 	"version": "3.0.0",
-	"description": "Convert the result of `process.hrtime()` to seconds, milliseconds, nanoseconds",
+	"description": "Convert the result of `process.hrtime.bigint()` to seconds, milliseconds, nanoseconds",
 	"license": "MIT",
 	"repository": "sindresorhus/convert-hrtime",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
-		"node": ">=8"
+		"node": ">=12"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -24,7 +27,6 @@
 		"hrtime",
 		"time",
 		"highres",
-		"perf",
 		"performance",
 		"bench",
 		"benchmark",
@@ -34,9 +36,9 @@
 		"nanoseconds"
 	],
 	"devDependencies": {
-		"@types/node": "^11.13.2",
-		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"@types/node": "^14.14.37",
+		"ava": "^3.15.0",
+		"tsd": "^0.14.0",
+		"xo": "^0.38.2"
 	}
 }

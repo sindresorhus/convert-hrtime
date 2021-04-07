@@ -1,13 +1,11 @@
-'use strict';
-
-module.exports = hrtime => {
-	const nanoseconds = (hrtime[0] * 1e9) + hrtime[1];
-	const milliseconds = nanoseconds / 1e6;
-	const seconds = nanoseconds / 1e9;
+export default function convertHrtime(hrtime) {
+	const nanoseconds = hrtime;
+	const milliseconds = nanoseconds / 1000000n;
+	const seconds = nanoseconds / 1000000000n;
 
 	return {
 		seconds,
 		milliseconds,
 		nanoseconds
 	};
-};
+}

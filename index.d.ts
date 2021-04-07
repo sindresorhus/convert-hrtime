@@ -1,22 +1,22 @@
-declare namespace convertHrtime {
-	interface HRTime {
-		seconds: number;
-		milliseconds: number;
-		nanoseconds: number;
-	}
+export interface HighResolutionTime {
+	seconds: bigint;
+	milliseconds: bigint;
+	nanoseconds: bigint;
 }
 
 /**
-Convert the result of [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time) to seconds, milliseconds, nanoseconds.
+Convert the result of [`process.hrtime.bigint()`](https://nodejs.org/api/process.html#process_process_hrtime_bigint) to seconds, milliseconds, nanoseconds.
 
 @example
 ```
-import convertHrtime = require('convert-hrtime');
+import convertHrtime from 'convert-hrtime';
 
-convertHrtime(process.hrtime(process.hrtime()));
+const startTime = process.hrtime.bigint();
+expensiveCalculation();
+const diff = process.hrtime.bigint() - startTime;
+
+convertHrtime(diff);
 //=> {seconds: 0.000002399, milliseconds: 0.002399, nanoseconds: 2399}
 ```
 */
-declare function convertHrtime(hrtime: [number, number]): convertHrtime.HRTime;
-
-export = convertHrtime;
+export default function convertHrtime(hrtime: bigint): HighResolutionTime;

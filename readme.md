@@ -1,7 +1,6 @@
 # convert-hrtime
 
-> Convert the result of [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time) to seconds, milliseconds, nanoseconds
-
+> Convert the result of [`process.hrtime.bigint()`](https://nodejs.org/api/process.html#process_process_hrtime_bigint) to seconds, milliseconds, nanoseconds
 
 ## Install
 
@@ -9,17 +8,15 @@
 $ npm install convert-hrtime
 ```
 
-
 ## Usage
 
 ```js
-const convertHrtime = require('convert-hrtime');
+import convertHrtime from 'convert-hrtime';
 
-convertHrtime(process.hrtime(process.hrtime()));
+const startTime = process.hrtime.bigint();
+expensiveCalculation();
+const diff = process.hrtime.bigint() - startTime;
+
+convertHrtime(diff);
 //=> {seconds: 0.000002399, milliseconds: 0.002399, nanoseconds: 2399}
 ```
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

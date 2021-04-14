@@ -1,7 +1,8 @@
 export default function convertHrtime(hrtime) {
 	const nanoseconds = hrtime;
-	const milliseconds = nanoseconds / 1000000n;
-	const seconds = nanoseconds / 1000000000n;
+	const number = Number(nanoseconds);
+	const milliseconds = number / 1000000;
+	const seconds = number / 1000000000;
 
 	return {
 		seconds,

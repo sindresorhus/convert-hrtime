@@ -18,5 +18,5 @@ expensiveCalculation();
 const diff = process.hrtime.bigint() - startTime;
 
 convertHrtime(diff);
-//=> {seconds: 0.000002399, milliseconds: 0.002399, nanoseconds: 2399}
+//=> {seconds: 0.000002399, milliseconds: 0.002399, nanoseconds: 2399n}
 ```
